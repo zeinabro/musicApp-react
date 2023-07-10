@@ -9,8 +9,16 @@ export default function Album() {
         }
     ]
 
-    const showAlbums = () => {
-        return (albumsInfo.map(album => <li>{album}</li>))
+    const [likedTrack, setLikedTrack] = useState(false)
+
+
+    function likeTrack () {
+        setLikedTrack(prevState => !prevState)
+    }
+
+    function isTrackLiked () {
+        const styles = likedTrack ? {color:'red'} : {color: 'black'}
+        return styles
     }
 
     return(
@@ -27,7 +35,8 @@ export default function Album() {
                         <tr>
                         <td><img src={album.cover}/></td>
                         <td>{album.name}</td>
-                        <td><ol>{album.tracks.map(track => <li>{track}</li>)}</ol></td>
+                        <td><ol>{album.tracks.map((track) => {
+                        return (<li onClick={likeTrack} style={isTrackLiked()}>{track}</li>)})}</ol></td>
                         <td>{album.release}</td>
                         </tr>
                         )
