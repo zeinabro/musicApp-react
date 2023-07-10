@@ -1,5 +1,7 @@
 import React from "react"
 import {createRoot} from "react-dom/client"
+import './App.css';
+
 
 const data = [
     { artistName: "Queen", genre: "Rock", description: "We are Queen ..." },
