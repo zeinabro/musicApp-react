@@ -2,7 +2,7 @@ import React from "react"
 import {createRoot} from "react-dom/client"
 
 export default function Artist(){
-
+    //const [inputs, setInputs] = useState({})
     return (
         <form>
           <label>Enter the Artist name:
