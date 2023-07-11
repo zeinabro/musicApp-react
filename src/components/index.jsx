@@ -1,3 +1,4 @@
 //index for exporting components
 
-export { ArtistList as default } from "./ArtistList"
+export { default as AlbumList } from "./AlbumList"
+export { default as AlbumItem } from "./AlbumItem"

@@ -1,4 +1,4 @@
-[
+const data = [
     { 
         "artistName": "Queen", 
         "genre": "Rock", 
@@ -21,3 +21,5 @@
         "release": 1973 
     }
 ]
+
+export default data

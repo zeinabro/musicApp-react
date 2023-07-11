@@ -1,0 +1,2 @@
+// album item component
+
