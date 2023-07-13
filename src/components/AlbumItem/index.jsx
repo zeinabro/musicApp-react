@@ -1,18 +1,18 @@
 import data from "../../data"
 import React from 'react';
 
-function AlbumItem({isTrackLiked, likeTrack}) {
+function AlbumItem({isTrackLiked, likeTrack,index}) {
     return (
         <>
             {data.map(album => (
-              <tr key={album.name}>
+              <tr>
                 <td>
                   <img src={album.cover} alt={album.name} />
                 </td>
                 <td>{album.name}</td>
                 <td>
                   <ol>
-                    {album.tracks.map((track,index) => (
+                    {album.tracks.map((track) => (
                       <><li
                         key={index}
                         style={isTrackLiked(track)}

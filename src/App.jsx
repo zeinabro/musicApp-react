@@ -4,6 +4,9 @@ import { AlbumList } from './components';
 
 function App() {
 
+    const [likedTracks, setLikedTracks] = useState([])
+    const [status, setStatus] = useState('all')
+
     const [bgColor, setBgColor] = useState('lightpink')
     useEffect(() => {
         const timer = setInterval(() => {
@@ -12,14 +15,14 @@ function App() {
             } else {
                 setBgColor('lightpink')
             }
-        },1000)
+        },10000)
         return (() => clearInterval(timer))
     })
 
-    const [likedTracks, setLikedTracks] = useState([])
     return(
         <>
-            <AlbumList likedTracks={likedTracks} setLikedTracks={setLikedTracks} bgColor={bgColor}/>
+            <AlbumList likedTracks={likedTracks} setLikedTracks={setLikedTracks}
+            bgColor={bgColor} setStatus={setStatus} status={status}/>
         </>
     )
 }
